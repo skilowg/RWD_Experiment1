@@ -1,0 +1,46 @@
+/*NOTES*/
+/*Proportion (ems): target/context = result in em [can apply this to font-size, line-height, and margin] */
+/*target: desired result in px*/
+/*context: total area in px*/
+
+
+
+body {
+  color: #333;
+  font: 100%/1.5 Cambria, Georgia, serif;
+  background: #ece6d6 url(_assets/bg-light.png) repeat;
+  margin: 0 auto;
+  padding: 1em 20%; /*temporary*/
+}
+
+h1 {
+  color: #2c1c16;
+  font-family: 'Proxmia Nova Bold',sans-serif;
+  font-weight: bold;
+  font-size: 1.75em; /*via 28/16 - 28px was the initial h1 size*/
+  line-height: 1.1428; /*via 32/28 - 32px comes from the desired line-height*/
+  margin-top: .8571em; /*via 24/28 - 24 comes from the desired top margin*/
+}
+
+.document {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+ol.media {
+  list-style: none;
+  margin: 0;
+  clear: both;
+  overflow: hidden; /*to clear floats*/
+}
+
+ol.media li.media-item {
+  background-color: #fff;
+  margin: 4.16666%; /*via (12/288)*100 where 12px is the desired result of the margin and 288 is the available width of the target area*/
+  width: 47.916666%; /*via (138/288)*100 where 138 is the desired size of a thumbnail at 320px (at mobile view) and 288 is the available width*/
+  float: left;
+}
+
+ol.media li.media-item:nth-child(2n) {
+  margin-right: 0;
+}
